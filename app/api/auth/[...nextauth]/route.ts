@@ -26,7 +26,8 @@ const handler = NextAuth({
 
             return {
                id: "user1",
-               name: "Harkirat Singh",
+               // name: "Harkirat Singh",
+               name: username,
                email: "harkirat@gmail.com",
             };
 
@@ -39,6 +40,7 @@ const handler = NextAuth({
          },
       }),
    ],
+   secret: process.env.NEXTAUTH_SECRET,
 });
 
 export const GET = handler;
